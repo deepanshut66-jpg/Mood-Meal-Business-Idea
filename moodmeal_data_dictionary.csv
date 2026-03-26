@@ -1,0 +1,168 @@
+column_name,data_type,description,allowed_values_or_notes
+respondent_id,string,Unique synthetic respondent ID,MM100001+
+latent_persona,categorical,Hidden consumer archetype used to generate correlated responses,"Budget Student Snacker, Office Lunch Professional, Health-Focused Urban User, Comfort-Food Convenience Seeker, Premium Fitness Buyer, Family/Group Orderer, Low-Frequency Traditional Buyer"
+age_group,categorical,Age Group,Survey response categories
+gender,categorical,Gender,Survey response categories
+city_tier,categorical,City Tier,Survey response categories
+occupation,categorical,Occupation,Survey response categories
+monthly_income_range,categorical,Monthly Income Range,Survey response categories
+daily_lifestyle,categorical,Daily Lifestyle,Survey response categories
+order_frequency_weekly,categorical,Order Frequency Weekly,Survey response categories
+most_ordered_meal_time,categorical,Most Ordered Meal Time,Survey response categories
+hardest_meal_to_manage,categorical,Hardest Meal To Manage,Survey response categories
+who_do_you_order_for,categorical,Who Do You Order For,Survey response categories
+food_preference,categorical,Food Preference,Survey response categories
+preferred_cuisines,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+preferred_moodmeal_categories,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+taste_profile,categorical,Taste Profile,Survey response categories
+preferred_meal_experience,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+meal_dislikes,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+ordering_reasons,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+biggest_frustration,categorical,Biggest Frustration,Survey response categories
+decision_factors,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+personalization_preferences,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+personalized_meal_use_cases,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+trust_triggers,multi-select text,Multi-select survey response stored as comma-separated values,See corresponding questionnaire options
+avg_spend_per_order,categorical,Avg Spend Per Order,Survey response categories
+comfortable_price_range,categorical,Comfortable Price Range,Survey response categories
+moodmeal_interest,categorical,Moodmeal Interest,Survey response categories
+avg_order_value_numeric,numeric,Approximate numeric average order value derived from spend band,Synthetic continuous value
+monthly_food_budget_numeric,numeric,Approximate numeric monthly outside-food budget derived from behavior,Synthetic continuous value
+comfortable_price_numeric,numeric,Approximate numeric willingness-to-pay value derived from price band,Synthetic continuous value
+age_group_ord,ordinal integer,Ordinal encoding of age_group,Encoded from ordered response bands
+city_tier_ord,ordinal integer,Ordinal encoding of city_tier,Encoded from ordered response bands
+monthly_income_range_ord,ordinal integer,Ordinal encoding of monthly_income_range,Encoded from ordered response bands
+order_frequency_weekly_ord,ordinal integer,Ordinal encoding of order_frequency_weekly,Encoded from ordered response bands
+avg_spend_per_order_ord,ordinal integer,Ordinal encoding of avg_spend_per_order,Encoded from ordered response bands
+comfortable_price_range_ord,ordinal integer,Ordinal encoding of comfortable_price_range,Encoded from ordered response bands
+moodmeal_interest_ord,ordinal integer,Ordinal encoding of moodmeal_interest,Encoded from ordered response bands
+gender__male,binary 0/1,One-hot indicator for gender: male,"1 if selected/matched, else 0"
+gender__female,binary 0/1,One-hot indicator for gender: female,"1 if selected/matched, else 0"
+gender__non_binary_prefer_not_to_say,binary 0/1,One-hot indicator for gender: non_binary_prefer_not_to_say,"1 if selected/matched, else 0"
+gender__other,binary 0/1,One-hot indicator for gender: other,"1 if selected/matched, else 0"
+occupation__student,binary 0/1,One-hot indicator for occupation: student,"1 if selected/matched, else 0"
+occupation__salaried_professional,binary 0/1,One-hot indicator for occupation: salaried_professional,"1 if selected/matched, else 0"
+occupation__self_employed_business_owner,binary 0/1,One-hot indicator for occupation: self_employed_business_owner,"1 if selected/matched, else 0"
+occupation__freelancer,binary 0/1,One-hot indicator for occupation: freelancer,"1 if selected/matched, else 0"
+occupation__homemaker,binary 0/1,One-hot indicator for occupation: homemaker,"1 if selected/matched, else 0"
+occupation__retired,binary 0/1,One-hot indicator for occupation: retired,"1 if selected/matched, else 0"
+occupation__other,binary 0/1,One-hot indicator for occupation: other,"1 if selected/matched, else 0"
+daily_lifestyle__mostly_at_home,binary 0/1,One-hot indicator for daily_lifestyle: mostly_at_home,"1 if selected/matched, else 0"
+daily_lifestyle__college_student_routine,binary 0/1,One-hot indicator for daily_lifestyle: college_student_routine,"1 if selected/matched, else 0"
+daily_lifestyle__office_based_routine,binary 0/1,One-hot indicator for daily_lifestyle: office_based_routine,"1 if selected/matched, else 0"
+daily_lifestyle__hybrid_work_study_routine,binary 0/1,One-hot indicator for daily_lifestyle: hybrid_work_study_routine,"1 if selected/matched, else 0"
+daily_lifestyle__frequently_travelling_field_based,binary 0/1,One-hot indicator for daily_lifestyle: frequently_travelling_field_based,"1 if selected/matched, else 0"
+daily_lifestyle__irregular_schedule,binary 0/1,One-hot indicator for daily_lifestyle: irregular_schedule,"1 if selected/matched, else 0"
+most_ordered_meal_time__breakfast,binary 0/1,One-hot indicator for most_ordered_meal_time: breakfast,"1 if selected/matched, else 0"
+most_ordered_meal_time__mid_morning_snack,binary 0/1,One-hot indicator for most_ordered_meal_time: mid_morning_snack,"1 if selected/matched, else 0"
+most_ordered_meal_time__lunch,binary 0/1,One-hot indicator for most_ordered_meal_time: lunch,"1 if selected/matched, else 0"
+most_ordered_meal_time__evening_snack,binary 0/1,One-hot indicator for most_ordered_meal_time: evening_snack,"1 if selected/matched, else 0"
+most_ordered_meal_time__dinner,binary 0/1,One-hot indicator for most_ordered_meal_time: dinner,"1 if selected/matched, else 0"
+most_ordered_meal_time__late_night,binary 0/1,One-hot indicator for most_ordered_meal_time: late_night,"1 if selected/matched, else 0"
+hardest_meal_to_manage__breakfast,binary 0/1,One-hot indicator for hardest_meal_to_manage: breakfast,"1 if selected/matched, else 0"
+hardest_meal_to_manage__lunch,binary 0/1,One-hot indicator for hardest_meal_to_manage: lunch,"1 if selected/matched, else 0"
+hardest_meal_to_manage__evening_snacks,binary 0/1,One-hot indicator for hardest_meal_to_manage: evening_snacks,"1 if selected/matched, else 0"
+hardest_meal_to_manage__dinner,binary 0/1,One-hot indicator for hardest_meal_to_manage: dinner,"1 if selected/matched, else 0"
+hardest_meal_to_manage__late_night_hunger,binary 0/1,One-hot indicator for hardest_meal_to_manage: late_night_hunger,"1 if selected/matched, else 0"
+hardest_meal_to_manage__i_usually_manage_all_meals_well,binary 0/1,One-hot indicator for hardest_meal_to_manage: i_usually_manage_all_meals_well,"1 if selected/matched, else 0"
+who_do_you_order_for__only_myself,binary 0/1,One-hot indicator for who_do_you_order_for: only_myself,"1 if selected/matched, else 0"
+who_do_you_order_for__myself_and_one_other_person,binary 0/1,One-hot indicator for who_do_you_order_for: myself_and_one_other_person,"1 if selected/matched, else 0"
+who_do_you_order_for__family,binary 0/1,One-hot indicator for who_do_you_order_for: family,"1 if selected/matched, else 0"
+who_do_you_order_for__friends_group,binary 0/1,One-hot indicator for who_do_you_order_for: friends_group,"1 if selected/matched, else 0"
+who_do_you_order_for__office_team_colleagues,binary 0/1,One-hot indicator for who_do_you_order_for: office_team_colleagues,"1 if selected/matched, else 0"
+food_preference__vegetarian,binary 0/1,One-hot indicator for food_preference: vegetarian,"1 if selected/matched, else 0"
+food_preference__eggetarian,binary 0/1,One-hot indicator for food_preference: eggetarian,"1 if selected/matched, else 0"
+food_preference__non_vegetarian,binary 0/1,One-hot indicator for food_preference: non_vegetarian,"1 if selected/matched, else 0"
+food_preference__vegan,binary 0/1,One-hot indicator for food_preference: vegan,"1 if selected/matched, else 0"
+food_preference__mix_of_veg_and_non_veg_depending_on_mood,binary 0/1,One-hot indicator for food_preference: mix_of_veg_and_non_veg_depending_on_mood,"1 if selected/matched, else 0"
+taste_profile__mild_simple,binary 0/1,One-hot indicator for taste_profile: mild_simple,"1 if selected/matched, else 0"
+taste_profile__medium_spicy,binary 0/1,One-hot indicator for taste_profile: medium_spicy,"1 if selected/matched, else 0"
+taste_profile__very_spicy,binary 0/1,One-hot indicator for taste_profile: very_spicy,"1 if selected/matched, else 0"
+taste_profile__sweet_savory_balance,binary 0/1,One-hot indicator for taste_profile: sweet_savory_balance,"1 if selected/matched, else 0"
+taste_profile__tangy_chatpata,binary 0/1,One-hot indicator for taste_profile: tangy_chatpata,"1 if selected/matched, else 0"
+taste_profile__depends_on_mood_occasion,binary 0/1,One-hot indicator for taste_profile: depends_on_mood_occasion,"1 if selected/matched, else 0"
+biggest_frustration__too_expensive,binary 0/1,One-hot indicator for biggest_frustration: too_expensive,"1 if selected/matched, else 0"
+biggest_frustration__unhealthy_too_oily,binary 0/1,One-hot indicator for biggest_frustration: unhealthy_too_oily,"1 if selected/matched, else 0"
+biggest_frustration__poor_hygiene_trust,binary 0/1,One-hot indicator for biggest_frustration: poor_hygiene_trust,"1 if selected/matched, else 0"
+biggest_frustration__lack_of_customization,binary 0/1,One-hot indicator for biggest_frustration: lack_of_customization,"1 if selected/matched, else 0"
+biggest_frustration__repetitive_options,binary 0/1,One-hot indicator for biggest_frustration: repetitive_options,"1 if selected/matched, else 0"
+biggest_frustration__small_portion_size,binary 0/1,One-hot indicator for biggest_frustration: small_portion_size,"1 if selected/matched, else 0"
+biggest_frustration__delayed_delivery,binary 0/1,One-hot indicator for biggest_frustration: delayed_delivery,"1 if selected/matched, else 0"
+biggest_frustration__food_doesn’t_match_my_craving_mood,binary 0/1,One-hot indicator for biggest_frustration: food_doesn’t_match_my_craving_mood,"1 if selected/matched, else 0"
+preferred_cuisines__north_indian,binary 0/1,One-hot indicator for preferred_cuisines: north_indian,"1 if selected/matched, else 0"
+preferred_cuisines__south_indian,binary 0/1,One-hot indicator for preferred_cuisines: south_indian,"1 if selected/matched, else 0"
+preferred_cuisines__chinese_indo_chinese,binary 0/1,One-hot indicator for preferred_cuisines: chinese_indo_chinese,"1 if selected/matched, else 0"
+preferred_cuisines__continental,binary 0/1,One-hot indicator for preferred_cuisines: continental,"1 if selected/matched, else 0"
+preferred_cuisines__healthy_bowls_salads,binary 0/1,One-hot indicator for preferred_cuisines: healthy_bowls_salads,"1 if selected/matched, else 0"
+preferred_cuisines__street_food_style,binary 0/1,One-hot indicator for preferred_cuisines: street_food_style,"1 if selected/matched, else 0"
+preferred_cuisines__home_style_meals,binary 0/1,One-hot indicator for preferred_cuisines: home_style_meals,"1 if selected/matched, else 0"
+preferred_cuisines__fusion_meals,binary 0/1,One-hot indicator for preferred_cuisines: fusion_meals,"1 if selected/matched, else 0"
+preferred_cuisines__desserts_sweet_meals,binary 0/1,One-hot indicator for preferred_cuisines: desserts_sweet_meals,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__healthy_meal_bowls,binary 0/1,One-hot indicator for preferred_moodmeal_categories: healthy_meal_bowls,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__comfort_food_combos,binary 0/1,One-hot indicator for preferred_moodmeal_categories: comfort_food_combos,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__breakfast_boxes,binary 0/1,One-hot indicator for preferred_moodmeal_categories: breakfast_boxes,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__office_lunch_packs,binary 0/1,One-hot indicator for preferred_moodmeal_categories: office_lunch_packs,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__functional_beverages,binary 0/1,One-hot indicator for preferred_moodmeal_categories: functional_beverages,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__snack_boxes,binary 0/1,One-hot indicator for preferred_moodmeal_categories: snack_boxes,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__light_meals_mini_meals,binary 0/1,One-hot indicator for preferred_moodmeal_categories: light_meals_mini_meals,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__family_meal_packs,binary 0/1,One-hot indicator for preferred_moodmeal_categories: family_meal_packs,"1 if selected/matched, else 0"
+preferred_moodmeal_categories__high_protein_meals,binary 0/1,One-hot indicator for preferred_moodmeal_categories: high_protein_meals,"1 if selected/matched, else 0"
+preferred_meal_experience__comforting_homely,binary 0/1,One-hot indicator for preferred_meal_experience: comforting_homely,"1 if selected/matched, else 0"
+preferred_meal_experience__rich_indulgent,binary 0/1,One-hot indicator for preferred_meal_experience: rich_indulgent,"1 if selected/matched, else 0"
+preferred_meal_experience__fresh_light,binary 0/1,One-hot indicator for preferred_meal_experience: fresh_light,"1 if selected/matched, else 0"
+preferred_meal_experience__high_protein_fitness_focused,binary 0/1,One-hot indicator for preferred_meal_experience: high_protein_fitness_focused,"1 if selected/matched, else 0"
+preferred_meal_experience__traditional_indian,binary 0/1,One-hot indicator for preferred_meal_experience: traditional_indian,"1 if selected/matched, else 0"
+preferred_meal_experience__experimental_trendy,binary 0/1,One-hot indicator for preferred_meal_experience: experimental_trendy,"1 if selected/matched, else 0"
+preferred_meal_experience__low_oil_clean_eating,binary 0/1,One-hot indicator for preferred_meal_experience: low_oil_clean_eating,"1 if selected/matched, else 0"
+meal_dislikes__too_oily,binary 0/1,One-hot indicator for meal_dislikes: too_oily,"1 if selected/matched, else 0"
+meal_dislikes__too_spicy,binary 0/1,One-hot indicator for meal_dislikes: too_spicy,"1 if selected/matched, else 0"
+meal_dislikes__too_bland,binary 0/1,One-hot indicator for meal_dislikes: too_bland,"1 if selected/matched, else 0"
+meal_dislikes__repetitive_meals,binary 0/1,One-hot indicator for meal_dislikes: repetitive_meals,"1 if selected/matched, else 0"
+meal_dislikes__very_sweet_items,binary 0/1,One-hot indicator for meal_dislikes: very_sweet_items,"1 if selected/matched, else 0"
+meal_dislikes__heavy_cream_rich_gravies,binary 0/1,One-hot indicator for meal_dislikes: heavy_cream_rich_gravies,"1 if selected/matched, else 0"
+meal_dislikes__processed_packaged_feel,binary 0/1,One-hot indicator for meal_dislikes: processed_packaged_feel,"1 if selected/matched, else 0"
+meal_dislikes__no_specific_dislike,binary 0/1,One-hot indicator for meal_dislikes: no_specific_dislike,"1 if selected/matched, else 0"
+ordering_reasons__convenience_saves_time,binary 0/1,One-hot indicator for ordering_reasons: convenience_saves_time,"1 if selected/matched, else 0"
+ordering_reasons__craving_mood_based_eating,binary 0/1,One-hot indicator for ordering_reasons: craving_mood_based_eating,"1 if selected/matched, else 0"
+ordering_reasons__no_time_to_cook,binary 0/1,One-hot indicator for ordering_reasons: no_time_to_cook,"1 if selected/matched, else 0"
+ordering_reasons__better_taste,binary 0/1,One-hot indicator for ordering_reasons: better_taste,"1 if selected/matched, else 0"
+ordering_reasons__variety,binary 0/1,One-hot indicator for ordering_reasons: variety,"1 if selected/matched, else 0"
+ordering_reasons__office_study_schedule,binary 0/1,One-hot indicator for ordering_reasons: office_study_schedule,"1 if selected/matched, else 0"
+ordering_reasons__social_occasions,binary 0/1,One-hot indicator for ordering_reasons: social_occasions,"1 if selected/matched, else 0"
+ordering_reasons__health_focused_needs,binary 0/1,One-hot indicator for ordering_reasons: health_focused_needs,"1 if selected/matched, else 0"
+ordering_reasons__affordable_combo_offers,binary 0/1,One-hot indicator for ordering_reasons: affordable_combo_offers,"1 if selected/matched, else 0"
+decision_factors__taste,binary 0/1,One-hot indicator for decision_factors: taste,"1 if selected/matched, else 0"
+decision_factors__price,binary 0/1,One-hot indicator for decision_factors: price,"1 if selected/matched, else 0"
+decision_factors__portion_size,binary 0/1,One-hot indicator for decision_factors: portion_size,"1 if selected/matched, else 0"
+decision_factors__healthiness,binary 0/1,One-hot indicator for decision_factors: healthiness,"1 if selected/matched, else 0"
+decision_factors__hygiene_trust,binary 0/1,One-hot indicator for decision_factors: hygiene_trust,"1 if selected/matched, else 0"
+decision_factors__delivery_speed,binary 0/1,One-hot indicator for decision_factors: delivery_speed,"1 if selected/matched, else 0"
+decision_factors__customisation_options,binary 0/1,One-hot indicator for decision_factors: customisation_options,"1 if selected/matched, else 0"
+personalization_preferences__spice_level,binary 0/1,One-hot indicator for personalization_preferences: spice_level,"1 if selected/matched, else 0"
+personalization_preferences__portion_size,binary 0/1,One-hot indicator for personalization_preferences: portion_size,"1 if selected/matched, else 0"
+personalization_preferences__calorie_level,binary 0/1,One-hot indicator for personalization_preferences: calorie_level,"1 if selected/matched, else 0"
+personalization_preferences__protein_level,binary 0/1,One-hot indicator for personalization_preferences: protein_level,"1 if selected/matched, else 0"
+personalization_preferences__ingredients_to_avoid,binary 0/1,One-hot indicator for personalization_preferences: ingredients_to_avoid,"1 if selected/matched, else 0"
+personalization_preferences__cuisine_type,binary 0/1,One-hot indicator for personalization_preferences: cuisine_type,"1 if selected/matched, else 0"
+personalization_preferences__mood_craving_based_recommendation,binary 0/1,One-hot indicator for personalization_preferences: mood_craving_based_recommendation,"1 if selected/matched, else 0"
+personalization_preferences__budget_based_recommendation,binary 0/1,One-hot indicator for personalization_preferences: budget_based_recommendation,"1 if selected/matched, else 0"
+personalized_meal_use_cases__busy_work_study_day,binary 0/1,One-hot indicator for personalized_meal_use_cases: busy_work_study_day,"1 if selected/matched, else 0"
+personalized_meal_use_cases__quick_breakfast_need,binary 0/1,One-hot indicator for personalized_meal_use_cases: quick_breakfast_need,"1 if selected/matched, else 0"
+personalized_meal_use_cases__post_workout_meal,binary 0/1,One-hot indicator for personalized_meal_use_cases: post_workout_meal,"1 if selected/matched, else 0"
+personalized_meal_use_cases__comfort_food_cravings,binary 0/1,One-hot indicator for personalized_meal_use_cases: comfort_food_cravings,"1 if selected/matched, else 0"
+personalized_meal_use_cases__late_night_hunger,binary 0/1,One-hot indicator for personalized_meal_use_cases: late_night_hunger,"1 if selected/matched, else 0"
+personalized_meal_use_cases__diet_calorie_conscious_eating,binary 0/1,One-hot indicator for personalized_meal_use_cases: diet_calorie_conscious_eating,"1 if selected/matched, else 0"
+personalized_meal_use_cases__family_ordering,binary 0/1,One-hot indicator for personalized_meal_use_cases: family_ordering,"1 if selected/matched, else 0"
+personalized_meal_use_cases__weekend_treat,binary 0/1,One-hot indicator for personalized_meal_use_cases: weekend_treat,"1 if selected/matched, else 0"
+trust_triggers__hygienic_packaging,binary 0/1,One-hot indicator for trust_triggers: hygienic_packaging,"1 if selected/matched, else 0"
+trust_triggers__clear_ingredient_nutrition_information,binary 0/1,One-hot indicator for trust_triggers: clear_ingredient_nutrition_information,"1 if selected/matched, else 0"
+trust_triggers__good_customer_reviews,binary 0/1,One-hot indicator for trust_triggers: good_customer_reviews,"1 if selected/matched, else 0"
+trust_triggers__affordable_pricing,binary 0/1,One-hot indicator for trust_triggers: affordable_pricing,"1 if selected/matched, else 0"
+trust_triggers__reliable_delivery,binary 0/1,One-hot indicator for trust_triggers: reliable_delivery,"1 if selected/matched, else 0"
+trust_triggers__freshness_guarantee,binary 0/1,One-hot indicator for trust_triggers: freshness_guarantee,"1 if selected/matched, else 0"
+trust_triggers__transparent_customization,binary 0/1,One-hot indicator for trust_triggers: transparent_customization,"1 if selected/matched, else 0"
+trust_triggers__attractive_packaging,binary 0/1,One-hot indicator for trust_triggers: attractive_packaging,"1 if selected/matched, else 0"
+moodmeal_interest_binary,derived,Derived modeling field,Synthetic/derived
+moodmeal_interest_3class,derived,Derived modeling field,Synthetic/derived
+moodmeal_interest_3class_code,derived,Derived modeling field,Synthetic/derived
+monthly_food_budget_band,derived,Derived modeling field,Synthetic/derived

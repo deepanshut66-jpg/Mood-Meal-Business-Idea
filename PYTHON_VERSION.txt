@@ -1,0 +1,2 @@
+Use Python 3.12 in Streamlit Community Cloud Advanced settings.
+The earlier deployment used Python 3.14.3, which can break pinned scientific packages.
